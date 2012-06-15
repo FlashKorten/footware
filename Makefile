@@ -1,9 +1,9 @@
 CC = gcc
-INCLUDES = -I/usr/X11R6/include
-LIBS = -L/usr/X11R6/lib -lX11 -lXtst
+INCLUDES = -I/usr/include/X11
+LIBS = -L/usr/lib/x86_64-linux-gnu -lX11 -lXtst
 
-default: 
-	$(CC) $(INCLUDES) $(LIBS) -o footware footware.c
+default:
+	$(CC) -o footware footware.c $(INCLUDES) $(LIBS)
 	strip footware
 
 clean:
